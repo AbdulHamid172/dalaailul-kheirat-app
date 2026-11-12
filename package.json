@@ -4,6 +4,8 @@
   "main": "expo-router/entry",
   "dependencies": {
     "@expo/ui": "~58.0.28",
+    "@expo/vector-icons": "^15.0.2",
+    "@react-native-async-storage/async-storage": "2.2.0",
     "expo": "~58.0.24",
     "expo-constants": "~58.0.16",
     "expo-device": "~58.0.5",
@@ -33,6 +35,7 @@
   },
   "scripts": {
     "start": "expo start",
+    "start:clear": "expo start --clear",
     "reset-project": "node ./scripts/reset-project.js",
     "android": "expo start --android",
     "ios": "expo start --ios",
