@@ -1,56 +1,104 @@
-# Welcome to your Expo app 👋
+═══START═══
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+<div align="center">
 
-## Get started
+# دلائل الخيرات
 
-1. Install dependencies
+# Dalāʾil al-Khayrāt
 
-   ```bash
-   npm install
-   ```
+**Waymarks of Benefits · Guide to Goodness**
 
-2. Start the app
+صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ
 
-   ```bash
-   npx expo start
-   ```
+</div>
 
-In the output, you'll find options to open the app in a
+---
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+A mobile companion to the timeless manual of blessings upon the Prophet Muhammad ﷺ, composed by **Imam al-Jazuli** in 15th-century Morocco and recited across the Islamic world for over five centuries.
 
-You can start developing by editing the files inside the **src/app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+Built with love, and dedicated as **Ṣadaqah Jāriyah** (ongoing charity) for the soul of **Ismail Ahmed** — إسماعيل أحمد.
 
-## Get a fresh project
+---
 
-When you're ready, run:
+## 📲 Download
+
+<div align="center">
+
+### [**Download for Android**](https://github.com/AbdulHamid172/dalaailul-kheirat-app/releases/latest)
+
+_Android 8.0+ · ~98 MB · no ads, no tracking, no account_
+
+</div>
+
+**Installation:**
+
+1. Tap the download link above
+2. Tap the `.apk` file when it finishes downloading
+3. If prompted, allow **"install from unknown sources"** (standard for any app distributed outside Play Store)
+4. Tap **Install** → **Open**
+
+> **iOS** — Coming soon. Requires an Apple Developer Program membership for distribution.
+
+---
+
+## ✨ What's inside
+
+- **The Eight Days** — the complete Dalāʾil cycle, arranged for daily recitation from Monday to the following Monday
+- **The Blessed Rawda** — the description of the Prophet's ﷺ resting place and that of his two companions, Abu Bakr and Umar (may Allah be pleased with them)
+- **The Names** — 99 Names of Allah **جَلَّ جَلَالُهُ** and 201 Names of the Prophet ﷺ, each searchable by Arabic, transliteration, or meaning
+- **Opening supplications** — the Dua of Intention (_niyyah_), the Opening Dua, and the Dua of Completion
+- **A guided recitation flow** — the "Continue" button on every screen walks you through the full sequence: **Intention → Opening → Names → Day 1 → … → Day 8 → Completion**
+
+---
+
+## 🕌 The recitation order
+
+The app follows the traditional sequence:
+
+Any day can be opened directly from the **Chapters** tab — the app guides but does not gate. Completed days are checked; the next one is highlighted in gold.
+
+---
+
+## 🎨 Design
+
+- **Amiri** Arabic typeface (traditional Naskh calligraphy)
+- Warm parchment palette — cream, gold, deep brown — inspired by classical manuscripts
+- Full RTL rendering with adjustable Arabic font size (S / M / L / XL)
+- Bookmarks save across sessions
+- No network calls. No analytics. No accounts. Everything is on-device.
+
+---
+
+## 🛠️ Built with
+
+|                                                                             |                                        |
+| --------------------------------------------------------------------------- | -------------------------------------- |
+| [Expo](https://expo.dev) SDK 58                                             | React Native framework + build tooling |
+| [Expo Router](https://docs.expo.dev/router/introduction/)                   | File-based routing                     |
+| [React Native](https://reactnative.dev) 0.88                                | Cross-platform mobile                  |
+| [Amiri](https://github.com/aliftype/amiri)                                  | Arabic typeface                        |
+| [AsyncStorage](https://react-native-async-storage.github.io/async-storage/) | Local persistence                      |
+
+---
+
+## 👨‍💻 For developers
 
 ```bash
-npm run reset-project
+git clone https://github.com/AbdulHamid172/dalaailul-kheirat-app.git
+cd dalaailul-kheirat-app
+npm install
+npx expo start
 ```
 
-This command will move the starter code to the **example** directory and create a blank **src/app** directory where you can start developing.
+app/
+(tabs)/ # bottom-tab routes: Home, Chapters, Bookmarks, Settings
+duas/ # intention, opening, completion
+reader/[id].tsx # chapter reader (days 1–8 + Rawda)
+names.tsx # 99 Names of Allah + 201 Names of the Prophet
+\_layout.tsx # Stack root
 
-### Other setup steps
-
-- To set up ESLint for linting, run `npx expo lint`, or follow our guide on ["Using ESLint and Prettier"](https://docs.expo.dev/guides/using-eslint/)
-- If you'd like to set up unit testing, follow our guide on ["Unit Testing with Jest"](https://docs.expo.dev/develop/unit-testing/)
-- Learn more about the TypeScript setup in this template in our guide on ["Using TypeScript"](https://docs.expo.dev/guides/typescript/)
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+components/ # ChapterCard, ArabicText, Header
+constants/ # Colors, Typography
+data/ # chapters + passages + names (JSON)
+utils/storage.ts # AsyncStorage helpers
+docs/ # GitHub Pages landing page
