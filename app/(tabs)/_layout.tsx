@@ -1,9 +1,19 @@
 // file: app/(tabs)/_layout.tsx
 import { Ionicons } from "@expo/vector-icons";
 import { Tabs } from "expo-router";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
 import Colors from "../../constants/Colors";
 
 export default function TabsLayout() {
+  const insets = useSafeAreaInsets();
+
+  // Base height without system inset; add insets.bottom on top.
+  // On gesture-nav phones insets.bottom ≈ 0.
+  // On 3-button-nav phones insets.bottom ≈ 48 → the tab bar sits above them.
+  const BASE_HEIGHT = 62;
+  const BASE_PAD_TOP = 6;
+  const BASE_PAD_BOTTOM = 6;
+
   return (
     <Tabs
       screenOptions={{
@@ -13,9 +23,9 @@ export default function TabsLayout() {
         tabBarStyle: {
           backgroundColor: Colors.surface,
           borderTopColor: Colors.border,
-          paddingBottom: 6,
-          paddingTop: 6,
-          height: 62,
+          paddingTop: BASE_PAD_TOP,
+          paddingBottom: BASE_PAD_BOTTOM + insets.bottom,
+          height: BASE_HEIGHT + insets.bottom,
         },
         tabBarLabelStyle: { fontSize: 11, fontWeight: "600" },
       }}
