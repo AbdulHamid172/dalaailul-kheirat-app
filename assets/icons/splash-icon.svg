@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <defs>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%"  stop-color="#c9b88f"/>
+      <stop offset="100%" stop-color="#9a8460"/>
+    </linearGradient>
+  </defs>
+
+  <!--
+    Transparent background — the splash screen's own background color
+    shows through. Set in app.json via expo.splash.backgroundColor.
+  -->
+
+  <!-- Arabic wordmark: دلائل الخيرات  (Dalāʾil al-Khayrāt) -->
+  <text x="512" y="480"
+        font-family="Amiri, 'Amiri Quran', 'Noto Naskh Arabic', serif"
+        font-weight="700"
+        font-size="180"
+        text-anchor="middle"
+        direction="rtl"
+        fill="url(#gold)"
+        stroke="#4a3f2e"
+        stroke-width="2"
+        paint-order="stroke">دلائل الخيرات</text>
+
+  <!-- English subtitle -->
+  <text x="512" y="620"
+        font-family="-apple-system, 'Segoe UI', 'DejaVu Sans', sans-serif"
+        font-weight="400"
+        font-size="60"
+        text-anchor="middle"
+        fill="#7d6e5a"
+        letter-spacing="4"
+        font-style="italic">Dalāʾil al-Khayrāt</text>
+
+  <!-- Gold divider -->
+  <path d="M 360 720 Q 512 740 664 720"
+        fill="none" stroke="url(#gold)" stroke-width="4" stroke-linecap="round"/>
+</svg>
