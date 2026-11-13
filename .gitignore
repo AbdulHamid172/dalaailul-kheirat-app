@@ -44,3 +44,4 @@ example
 
 # Local build artifacts (released via GitHub Releases)
 /releases/
+app.json.bak*
